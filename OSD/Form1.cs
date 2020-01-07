@@ -69,8 +69,8 @@ namespace OSD
                 clb_Software.Items.Add(sven_ist_ein_fotzenkopf, true);
             }
 
-            
-        
+
+            outToLog("Software erfolgreich geladen!");
             
         }
 
@@ -79,12 +79,26 @@ namespace OSD
             clb_Software.Items.Clear();
         }
 
+        void outToLog(string output)
+        {
+            if (!string.IsNullOrWhiteSpace(rtb_status.Text))
+            {
+                rtb_status.AppendText("\r\n" + output);
+            }
+            else
+            {
+                rtb_status.AppendText(output);
+            }
+            rtb_status.ScrollToCaret();
+        }
+
         private void installSoftware(string msi_installer, string msi_ini)
         {
             Process p = new Process();
             p.StartInfo.FileName = "msiexec.exe";
-            p.StartInfo.Arguments = "/i " + msi_installer +" /qn";
+            p.StartInfo.Arguments = "/i " + msi_installer + " /qb-";
             p.Start();
+            p.WaitForExit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,8 +119,6 @@ namespace OSD
                     //Prüfen ob Ini-File anwesend ist.
                     if (File.Exists(path_config))
                     {
-                        // MessageBox.Show("Installation sollte hier nun sein.");
-
                         installSoftware(path_installer, path_config);
                     }
 
@@ -115,11 +127,11 @@ namespace OSD
                         DialogResult dialogResult = MessageBox.Show("Ini konnte nicht gefunden werden, " + file + " trotzdem installieren?", "Ini nicht gefunden!", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
-                            MessageBox.Show("Installation sollte hier nun sein.");
+                            installSoftware(path_installer, path_config);
                         }
                         else if (dialogResult == DialogResult.No)
                         {
-                            
+                            MessageBox.Show("Ini prüfen!");
                         }
                     }
                 }
@@ -127,8 +139,9 @@ namespace OSD
                 {
                     MessageBox.Show("Konnte Installer von " + file + " nicht finden, bitte den Stick prüfen");
                 }
+                outToLog(file + " wurde installiert!");
             }
-            
+            outToLog("Alle Softwares wurden installiert!"); 
         }
     }
 }

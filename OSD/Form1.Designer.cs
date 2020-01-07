@@ -33,11 +33,11 @@
             this.rb_MM_Server = new System.Windows.Forms.RadioButton();
             this.lbl_main_header = new System.Windows.Forms.Label();
             this.clb_Software = new System.Windows.Forms.CheckedListBox();
-            this.pb_installation = new System.Windows.Forms.ProgressBar();
             this.gb_Mode = new System.Windows.Forms.GroupBox();
             this.btn_load_software = new System.Windows.Forms.Button();
             this.lbl_path = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.rtb_status = new System.Windows.Forms.RichTextBox();
             this.gb_Mode.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,20 +81,14 @@
             // clb_Software
             // 
             this.clb_Software.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.clb_Software.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.clb_Software.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clb_Software.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.clb_Software.FormattingEnabled = true;
-            this.clb_Software.Location = new System.Drawing.Point(998, 120);
+            this.clb_Software.Location = new System.Drawing.Point(835, 90);
             this.clb_Software.Name = "clb_Software";
-            this.clb_Software.ScrollAlwaysVisible = true;
-            this.clb_Software.Size = new System.Drawing.Size(392, 529);
+            this.clb_Software.Size = new System.Drawing.Size(555, 559);
             this.clb_Software.TabIndex = 3;
-            // 
-            // pb_installation
-            // 
-            this.pb_installation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_installation.Location = new System.Drawing.Point(998, 655);
-            this.pb_installation.Name = "pb_installation";
-            this.pb_installation.Size = new System.Drawing.Size(392, 19);
-            this.pb_installation.TabIndex = 5;
             // 
             // gb_Mode
             // 
@@ -148,17 +142,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // rtb_status
+            // 
+            this.rtb_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.rtb_status.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtb_status.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.rtb_status.Location = new System.Drawing.Point(61, 275);
+            this.rtb_status.Name = "rtb_status";
+            this.rtb_status.Size = new System.Drawing.Size(768, 281);
+            this.rtb_status.TabIndex = 10;
+            this.rtb_status.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1402, 686);
+            this.Controls.Add(this.rtb_status);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_path);
             this.Controls.Add(this.btn_load_software);
             this.Controls.Add(this.gb_Mode);
-            this.Controls.Add(this.pb_installation);
             this.Controls.Add(this.clb_Software);
             this.Controls.Add(this.lbl_main_header);
             this.HelpButton = true;
@@ -179,11 +185,11 @@
         private System.Windows.Forms.RadioButton rb_MM_Server;
         private System.Windows.Forms.Label lbl_main_header;
         private System.Windows.Forms.CheckedListBox clb_Software;
-        private System.Windows.Forms.ProgressBar pb_installation;
         private System.Windows.Forms.GroupBox gb_Mode;
         private System.Windows.Forms.Button btn_load_software;
         private System.Windows.Forms.Label lbl_path;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox rtb_status;
     }
 }
 
