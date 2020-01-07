@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace OSD
 {
@@ -60,14 +61,30 @@ namespace OSD
         {
             string osd_path = Directory.GetCurrentDirectory();
             string path_software = osd_path+@"\software";
+            liste_leeren();
 
             foreach (string file in Directory.GetDirectories(path_software))
             {
                 string sven_ist_ein_fotzenkopf = Convert.ToString(file.Remove(0, path_software.Length+1));
                 clb_Software.Items.Add(sven_ist_ein_fotzenkopf, true);
             }
-                
+
             
+        
+            
+        }
+
+        private void liste_leeren()
+        {
+            clb_Software.Items.Clear();
+        }
+
+        private void installSoftware(string msi_installer, string msi_ini)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "msiexec.exe";
+            p.StartInfo.Arguments = "/i " + msi_installer +" /qn";
+            p.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,10 +92,41 @@ namespace OSD
             string osd_path = Directory.GetCurrentDirectory();
             string path_software = osd_path + @"\software";
 
-
             foreach (string file in clb_Software.CheckedItems)
             {
-                string setup =  
+                string software_name = file;
+                string path_installer = path_software +  @"\" + file + @"\setup.msi";
+                string path_config = path_software + @"\" + file + @"\parameter.ini";
+
+
+                //Prüfen ob MSI-File anwesend ist.
+                if (File.Exists(path_installer))
+                {
+                    //Prüfen ob Ini-File anwesend ist.
+                    if (File.Exists(path_config))
+                    {
+                        // MessageBox.Show("Installation sollte hier nun sein.");
+
+                        installSoftware(path_installer, path_config);
+                    }
+
+                    else
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Ini konnte nicht gefunden werden, " + file + " trotzdem installieren?", "Ini nicht gefunden!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            MessageBox.Show("Installation sollte hier nun sein.");
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Konnte Installer von " + file + " nicht finden, bitte den Stick prüfen");
+                }
             }
             
         }

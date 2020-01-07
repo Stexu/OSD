@@ -7,3 +7,13 @@ C:\Users\Stexu\source\repos\OSD\OSD\obj\Debug\OSD.Properties.Resources.resources
 C:\Users\Stexu\source\repos\OSD\OSD\obj\Debug\OSD.csproj.GenerateResource.cache
 C:\Users\Stexu\source\repos\OSD\OSD\obj\Debug\OSD.exe
 C:\Users\Stexu\source\repos\OSD\OSD\obj\Debug\OSD.pdb
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.csprojAssemblyReference.cache
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.Form1.resources
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.Properties.Resources.resources
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.csproj.GenerateResource.cache
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.csproj.CoreCompileInputs.cache
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.exe
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.pdb
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\bin\Debug\OSD.exe.config
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\bin\Debug\OSD.exe
+C:\Users\Stexu\Documents\GitHub\OSD\OSD\bin\Debug\OSD.pdb
