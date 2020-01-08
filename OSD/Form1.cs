@@ -65,8 +65,8 @@ namespace OSD
 
             foreach (string file in Directory.GetDirectories(path_software))
             {
-                string sven_ist_ein_fotzenkopf = Convert.ToString(file.Remove(0, path_software.Length+1));
-                clb_Software.Items.Add(sven_ist_ein_fotzenkopf, true);
+                string path_short = Convert.ToString(file.Remove(0, path_software.Length+1));
+                clb_Software.Items.Add(path_short, true);
             }
 
 
