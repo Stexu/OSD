@@ -21,3 +21,17 @@ C:\Users\Stexu\Documents\GitHub\OSD\OSD\bin\Debug\OSD.exe.manifest
 C:\Users\Stexu\Documents\GitHub\OSD\OSD\bin\Debug\OSD.application
 C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.exe.manifest
 C:\Users\Stexu\Documents\GitHub\OSD\OSD\obj\Debug\OSD.application
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\bin\Debug\OSD.exe.config
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\bin\Debug\OSD.exe.manifest
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\bin\Debug\OSD.application
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\bin\Debug\OSD.exe
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\bin\Debug\OSD.pdb
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.csprojAssemblyReference.cache
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.Form1.resources
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.Properties.Resources.resources
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.csproj.GenerateResource.cache
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.csproj.CoreCompileInputs.cache
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.exe.manifest
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.application
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.exe
+C:\Users\jalbers\Source\Repos\Stexu\OSD\OSD\obj\Debug\OSD.pdb

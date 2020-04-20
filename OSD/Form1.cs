@@ -18,9 +18,27 @@ namespace OSD
         {
             InitializeComponent();
 
+            int debug_mode_enabled = 0;
+
             string osd_env_path = Directory.GetCurrentDirectory();
 
             string osd_soft_path = osd_env_path + @"\software" ;
+
+            string[] CommandLineArgs = Environment.GetCommandLineArgs();
+
+            if (CommandLineArgs.Length > 1)
+            {
+
+                string tmp_cla = Convert.ToString(CommandLineArgs[1]);
+
+                if (tmp_cla == "-debug")
+                {
+
+                    outToLog("!!!DEBUG ENABLED!!!");
+
+                    debug_mode_enabled = 1;
+                }
+            }
 
               try
             {
@@ -59,15 +77,26 @@ namespace OSD
 
         private void btn_load_software_Click(object sender, EventArgs e)
         {
-            string osd_path = Directory.GetCurrentDirectory();
-            string path_software = osd_path+@"\software";
-            liste_leeren();
 
-            foreach (string file in Directory.GetDirectories(path_software))
+            if(rb_MM_Server.Checked == true)
             {
-                string path_short = Convert.ToString(file.Remove(0, path_software.Length+1));
-                clb_Software.Items.Add(path_short, true);
+                outToLog("Servermodus ausgewählt!!!DEBUG!!!");
             }
+            else
+            {
+                string osd_path = Directory.GetCurrentDirectory();
+                string path_software = osd_path + @"\software";
+                liste_leeren();
+
+                foreach (string file in Directory.GetDirectories(path_software))
+                {
+                    string path_short = Convert.ToString(file.Remove(0, path_software.Length + 1));
+                    clb_Software.Items.Add(path_short, true);
+                }
+
+            }
+
+
 
 
             outToLog("Software erfolgreich geladen!");
