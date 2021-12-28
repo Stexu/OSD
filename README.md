@@ -19,3 +19,5 @@ or uncheck accordingly to your wishes.
 + Allowing to set instructions and options with full SYSVAR support per application.
 + Bugfixes basic cleanup stuff.
 + Update the UI look and make it more user friendly.
++ Unify Language
++ Write Server application
