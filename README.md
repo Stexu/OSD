@@ -12,3 +12,10 @@ Start the Software as Administrator. It will create a folder called "software" i
 
 After that you can Start the Software and click "Load Software". It should now list your Software in a checkbox list. Check
 or uncheck accordingly to your wishes.
+
+
+## ToDo
+
++ Allowing to set instructions and options with full SYSVAR support per application.
++ Bugfixes basic cleanup stuff.
++ Update the UI look and make it more user friendly.
